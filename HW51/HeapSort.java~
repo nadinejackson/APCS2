@@ -1,0 +1,19 @@
+public class HeapSort
+{
+    //parent is floor (i - 1) / 2
+    public static void heapify(int[] arr, int i)
+    {
+	if(arr[i] < arr[(i - 1) / 2])
+	    {
+		int j = arr[i];
+		arr[i] = arr[(i - 1) / 2];
+		arr[(i - 1) / 2] = j;
+		heapify(arr, (i - 1) / 2);
+	    }
+	else{}
+    }
+    public static int[] sort(int[] arr)
+    {
+	heapify(arr, 1);
+    }
+}

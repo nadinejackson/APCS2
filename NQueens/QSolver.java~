@@ -1,0 +1,28 @@
+public class QSolver
+{
+    public static String print(int[][] arr)
+    {
+	String ret = "";
+	for (int i = 0; i < arr.length; i++){
+	    for (int j = 0; j < arr[0].length; j++)
+		ret += j + " ";
+	    ret += "\n"
+		}
+	return ret;
+    }
+    public static int[][] solve()
+    {
+	return solve(new int[8][8], 0);
+    }
+    public static int[][] solve(int[][] board, int row)
+    {
+	if (row > 7)
+	    return board;
+	for (int i = 0; i <  8; i++)
+	    
+    }
+    public static void main(String[] args)
+    {
+	System.out.println(print(solve()));
+    }
+}

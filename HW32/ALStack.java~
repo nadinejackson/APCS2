@@ -1,0 +1,56 @@
+/*****************************************************
+ * Nadie Jackson
+ * APCS2 pd2
+ * HW32 -- Leon Leonwood Stack
+ * 2018-04-11
+ * Implements a stack of PANCAKES using an encapsulated LinkedList
+ *****************************************************/
+import java.util.LinkedList;
+
+public class ALStack<PANCAKE> implements Stack<PANCAKE>
+{
+    private  ArrayList<PANCAKE> _stack; //inner container 
+    private int _stackSize; //marker of what's inside
+
+    //constructor
+    public LLStack( int size )
+    {
+	_stack = new ArrayList();
+	_stackSize = 0; 
+    }
+
+    //means of insertion
+    public void push(PANCAKE p)
+    {
+	_stack.add(p);
+    }
+
+    //means of removal
+    public PANCAKE pop( )
+    {
+	return _stack.remove(0);
+    }
+
+    //chk for emptiness
+    public boolean isEmpty()
+    {
+	return _stackSize == 0;
+    }
+
+    //chk for fullness
+    public boolean isFull()
+    {
+	return _stackSize == _stack.size();
+    }
+
+    public PANCAKE peek()
+    {
+	return (_stack.get(0));
+    }
+
+    //main method for testing
+    public static void main( String[] args )
+    {
+    }
+
+}//end class ALStack

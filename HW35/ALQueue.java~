@@ -1,0 +1,26 @@
+public class ALQueue<Quasar> implements Queue<Quasar>
+{
+    private ArrayList<Quasar> _list;
+    private int _size;
+    public ALQueue()
+    {
+	_list = new ArrayList<Quasar>();
+	_size = 0;
+    }
+    public boolean isEmpty()
+    {
+	return _size == 0;
+    }
+    public void enqueue(Quasar x)
+    {
+	_list.add(x);
+    }
+    public Quasar dequeue()
+    {
+	return _list.remove(0);
+    }
+    public Quasar peekFront()
+    {
+	return _list.get(_size - 1);
+    }
+}

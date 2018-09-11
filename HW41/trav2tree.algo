@@ -1,0 +1,30 @@
+Nadie Jackson
+APCS2 pd2
+HW41 -- A Tree Grows in 251
+2018-04-29
+
+Minimum Prerequisite Information: One traversal in infix notation and one traversal in either prefix or postfix notation.
+
+Note: We are counting like the average Joe. The first node is at index 0. Have a nice day.
+
+Algorithm for Given Prefix and Infix Traversals:
+0. i = 0
+1. i += 1
+2. The root of this tree is the ith node in prefix notation
+3. Split the nodes in infix notation into those left and right of the root
+4. If the left half has no nodes, move on to step 6.
+5. The determine the left subtree by going back to perform step one and onward on the left half of the list of nodes.
+6. If the right half has no nodes, move on to step 8.
+7. The determine the right subtree by going back to perform step one and onward on the right half of the list of nodes.
+8. Return the tree.
+
+Algorithm for Given Postfix and Infix Traversals:
+0. i = number of nodes in postfix traversal
+1. i -= 1
+2. The root of this tree is the ith node in postfix notation
+3. Split the nodes in infix notation into those left and right of the root
+4. If the left half has no nodes, move on to step 6.
+5. The determine the right subtree by going back to perform step one and onward on the left half of the list of nodes.
+6. If the right half has no nodes, move on to step 8.
+7. The determine the left subtree by going back to perform step one and onward on the right half of the list of nodes.
+8. Return the tree.

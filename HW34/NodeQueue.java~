@@ -1,0 +1,5 @@
+public class NodeQueue<Quasar> implements Queue<Quasar>
+{
+    private LLNode<
+    public NodeQueue(){}
+}
